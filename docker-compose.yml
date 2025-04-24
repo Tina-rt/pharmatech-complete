@@ -1,0 +1,50 @@
+
+services:
+  # frontend:
+  #   build: pharma-tech
+  #   command: rm -rf /tmp/nitro 
+  #   ports:
+  #     - "3000:3000"
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: tinatina
+      POSTGRES_DB: pharmatech
+    restart: unless-stopped
+    
+
+    ports:
+      - "5432:5432"
+  backend:
+    build: Back-end-Pharmatech
+    depends_on:
+      - postgres
+    ports:
+      - "3003:3003"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: tinatina
+      POSTGRES_DB: pharmatech
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_CONNECTION_STRING: "postgresql://postgres:tinatina@postgres:5432/pharmatech"
+    
+  frontend_admin:
+    build: pharmatech-nuxt-admin
+    depends_on:
+      - backend
+    ports:
+      - "3002:3000"
+    environment:
+      NUXT_PUBLIC_API_BASE: "http://localhost:3003/api"
+      NUXT_PUBLIC_API_PARENT: "http://localhost:3003"
+
+  frontend_client:
+    build: pharma-tech
+    depends_on:
+      - backend
+    ports:
+      - "3001:3001"
+    environment:
+      NUXT_PUBLIC_API_BASE: "http://localhost:3003"

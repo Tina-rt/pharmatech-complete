@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --vert-principal: #28a745;
+    --vert-fonce: #304d30;
+    --vert-fonce-1: #448042;
+    --vert-clair-1: #bfe5c7;
+    --vert-clair-2: #c5ef99;
+    --vert-clair-3: #C5FFC3;
+    --vert-claire-4: #BFFFCE36;
+    --btn-primary-hover: #81C784;
+    --rose-clair: #faedc9;
+    --violet-clair: #f8ecfe;
+    --gris-clair: #F1F3F4;
+}
+
+html {
+    background-color: white !important;
+    color: black !important;
+    width: 100%;
+    height: 100%;
+    font-family: "Nunito", sans-serif;
+}
+
+.btn-primary {
+    background-color: var(--vert-principal);
+    color: white;
+    border: none;
+}
+
+.btn-little {
+    min-height: 2.4rem;
+    aspect-ratio: 103/34;
+}
+
+.btn-secondary{
+    background-color: white;
+    border: 1px solid var(--vert-principal);
+    color: var(--vert-principal);
+}
+.btn-secondary:hover{
+    background-color: var(--gris-clair);
+    /* color: white; */
+    border: 1px solid var(--vert-principal);
+}
+
+.btn-primary:hover {
+    background-color: var(--btn-primary-hover);
+}
+.text-green{
+    color: var(--vert-principal);
+}
+
+.link{
+    text-decoration: none;
+}
+.link:hover{
+    text-decoration: underline;
+}
+
+.title {
+    font-family: Nunito, sans-serif;
+    font-size: 60px;
+    line-height: 81.84px;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.bold-title {
+    font-weight: 700;
+}
+
+p {
+    line-height: 32.74px;
+}
+
+.product-name {
+    font-family: Nunito;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 27.28px;
+    text-align: left;
+}
+
+.form-title{
+    background-color: var(--vert-clair-3);
+    padding: 0.2rem 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-block: 1rem;
+}
+
+.radio:checked, .radio[aria-checked="true"]{
+    background-color: var(--vert-principal);
+}
+
+.price, .radiolabel{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.description-text, .text-secondary{
+    color: #757575;
+}
+
+.bg-vert-claire-3{
+    background-color: var(--vert-clair-3);
+}
+
+.bg-vert-claire-1{
+    background-color: var(--vert-clair-1);
+}
+.bg-vert-claire-4{
+    background-color: var(--vert-claire-4);
+}
+
+.text-primary{
+    color: var(--vert-principal);
+}
+
+.input-error{
+    color: red;
+    /* padding-top: 0.2rem; */
+}
+
+.alert-success {
+    background-color: var(--vert-clair-2);
+}
