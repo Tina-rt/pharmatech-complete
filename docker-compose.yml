@@ -12,6 +12,8 @@ services:
       POSTGRES_PASSWORD: tinatina
       POSTGRES_DB: pharmatech
     restart: unless-stopped
+    volumes:
+      - pgdata:/var/lib/postgresql/data
     
 
     ports:
@@ -48,3 +50,6 @@ services:
       - "3001:3001"
     environment:
       NUXT_PUBLIC_API_BASE: "http://localhost:3003"
+
+volumes:
+  pgdata:
