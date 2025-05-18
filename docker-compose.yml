@@ -39,8 +39,8 @@ services:
     ports:
       - "3002:3000"
     environment:
-      NUXT_PUBLIC_API_BASE: "http://backend:3003/api"
-      NUXT_PUBLIC_API_PARENT: "http://backend:3003"
+      NUXT_PUBLIC_API_BASE: "https://api.techcare.store/api"
+      NUXT_PUBLIC_API_PARENT: "https://api.techcare.store"
 
   frontend_client:
     build: pharma-tech
@@ -49,7 +49,7 @@ services:
     ports:
       - "3001:3001"
     environment:
-      NUXT_PUBLIC_API_BASE: "http://backend:3003"
+      NUXT_PUBLIC_API_BASE: "https://api.techcare.store"
 
 volumes:
   pgdata:

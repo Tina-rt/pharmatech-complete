@@ -36,6 +36,14 @@ app.get("/", (req, res) => {
     });
 });
 
+app.post("/test", (req, res) => {
+    console.log(req.body);
+    res.status(200).json({
+        status: "success",
+        message: "API Rest post method Marche bien dans Pharmatech Back end",
+    });
+});
+
 //tous les routes
 app.use("/api/auth", authRouter); //route pour authentification
 app.use("/api/utilisateur", utilisateurRouter); //route pour utilisateur

@@ -9,7 +9,7 @@ module.exports = {
       {
         nom: "ADMIN",
         prenom: "Admin",
-        email: "rakotomaroharilala5@gmail.com",
+        email: "radolazaleondaris@gmail.com",
         motdepasse: hashedPassword,
         phone: "0340417324",
         role: "admin",
@@ -22,7 +22,7 @@ module.exports = {
   async down(queryInterface, Sequelize) {
     await queryInterface.bulkDelete(
       "utilisateur",
-      { email: "rakotomaroharilala5@gmail.com" },
+      { email: "radolazaleondaris@gmail.com" },
       {}
     );
   },
