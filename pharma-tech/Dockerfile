@@ -1,5 +1,5 @@
 # Use the official Node.js image as the base image
-FROM node:22-alpine as build
+FROM node:22-alpine AS build
 
 # Set the working directory in the container
 WORKDIR /app
@@ -16,7 +16,7 @@ COPY . .
 # Build the Nuxt.js application
 RUN npm run build
 
-FROM node:22-alpine as production
+FROM node:22-alpine AS production
 WORKDIR /app
 
 
