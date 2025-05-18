@@ -75,6 +75,6 @@ async function test() {
 
 test();
 
-app.listen(port, () =>
+app.listen(port, "0.0.0.0", () =>
     console.log(`Pharmatech back end sur le port :  ${port}!`)
 );
